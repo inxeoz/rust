@@ -7,8 +7,18 @@ pub fn main() {
 
     stdin().read_line(&mut input).expect("error reading from stdin");
 
-    let mut n : i32  = input.trim().parse::<i32>().expect("not i32");
+    let  n : i32  = input.trim().parse::<i32>().expect("not i32");
 
+
+    println!("{} ? {}", n, rev(n));
+
+}
+
+
+pub fn rev(mut n: i32) -> i32  {
+
+    //here 01 -> 1
+    // 10 -> 1
 
     //  128
 
@@ -20,8 +30,6 @@ pub fn main() {
 
     // 1 / 10 = 0
     // 1 % 10 = 1 rev  =  ( 8 * 10 + 2 ) * 10 + 1
-
-
 
     let mut d = n % 10;
     let mut rev : i32 =d ;
@@ -36,8 +44,5 @@ pub fn main() {
 
     }
 
-    println!("{} ? {}", n, rev);
-
-
-
+     rev
 }
