@@ -10,7 +10,7 @@ pub fn main() {
 
     let n : i32 = input.trim().parse::<i32>().expect("Not a number");
 
-    input.clear();
+    (&mut input).clear();
     println!("enter pow");
     stdin().read_line(&mut input).expect("Failed to read line");
 
