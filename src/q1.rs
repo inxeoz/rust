@@ -1,7 +1,7 @@
 
 use std::io::{stdin, stdout};
 
-fn main() {
+pub fn main() {
 
     let mut input : String  = String::new();
 

@@ -1,21 +1,12 @@
-use std::io::{stdin, stdout};
+mod q1;
+mod q2;
+mod q3;
 
 fn main() {
 
-    let mut input : String  = String::new();
+  // q1::main();
 
-    stdin().read_line(&mut input).expect("did not get input");
+  //q2::main();
 
-    let n : i32 = input.trim().parse::<i32> ().expect("invalid input");
-
-    let mut sum : i32 = 0;
-
-    for v in 1..=n {
-
-        sum += v;
-
-        println!("{}", v)
-    }
-
-    println!("sum {}", sum)
+  q3::main();
 }
