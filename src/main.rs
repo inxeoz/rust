@@ -6,7 +6,9 @@ mod q5;
 mod q6;
 mod q7;
 mod q8;
+mod q9;
+mod q10;
 
 fn main() {
-  q8::main()
+  q10::main()
 }
