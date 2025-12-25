@@ -20,10 +20,13 @@ pub fn main() {
     fn pow(mut n: i32, p:i32 ) -> i32
    {
 
-       for _ in 0..p {
-           n *= n;
+       let mut res = n;
+
+       for _ in 0..p-1 {
+
+           res *= n;
        }
-       n
+     res
 
         };
 
