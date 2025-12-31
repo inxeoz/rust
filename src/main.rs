@@ -24,7 +24,8 @@ mod q23;
 mod q24;
 mod q25;
 mod q26;
+mod q27;
 
 fn main() {
-  q26::main()
+  q27::main()
 }
