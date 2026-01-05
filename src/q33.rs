@@ -20,7 +20,7 @@ fn search(list: [i32; 10], mut left: i32, mut right: i32, finding: i32) -> i32 {
     }
 
     if finding > value {
-        left = mid;
+        left = mid + 1;
     } else {
         right = mid;
     }

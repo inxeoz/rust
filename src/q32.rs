@@ -16,7 +16,7 @@ pub fn main() {
 
             return;
         } else if value < finding_value {
-            low = mid;
+            low = mid + 1;
         } else if value > finding_value {
             high = mid;
         } else {
