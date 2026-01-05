@@ -1,6 +1,6 @@
 
 
-use std::io::{stdin, stdout};
+use std::io::stdin;
 pub fn main() {
     let mut input  = String::new();
 
@@ -17,7 +17,7 @@ pub fn main() {
     let p = input.trim().parse::<i32>().expect("Not a number");
 
 
-    fn pow(mut n: i32, p:i32 ) -> i32
+    fn pow(n: i32, p:i32 ) -> i32
    {
 
        let mut res = n;

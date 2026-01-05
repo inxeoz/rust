@@ -1,4 +1,4 @@
-use std::io::{stdin, stdout, };
+use std::io::stdin;
 pub fn main() {
 
     let mut input : String = String::new();

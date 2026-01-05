@@ -1,5 +1,5 @@
 
-use std::collections::{hash_map, HashMap};
+use std::collections::HashMap;
 pub fn main() {
 
     const ARR : [i32; 10] = [

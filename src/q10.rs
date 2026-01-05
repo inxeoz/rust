@@ -8,7 +8,7 @@ pub fn main() {
 
     stdin().read_line(&mut input).expect("err reading input");
 
-    let mut n = input.trim().parse::<u32>().expect("error parsing num");
+    let n = input.trim().parse::<u32>().expect("error parsing num");
 
     println!("facto of {} is {}", n, facto(n));
 

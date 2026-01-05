@@ -1,5 +1,5 @@
 
-use std::io::{stdin, stdout};
+use std::io::stdin;
 
 pub fn main() {
 

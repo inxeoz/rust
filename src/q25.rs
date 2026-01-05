@@ -9,13 +9,13 @@ pub fn main() {
     println!("first word");
 
     stdin().read_line(&mut input).expect("cant read first word");
-    let mut a = input.trim().to_string();
+    let a = input.trim().to_string();
     input.clear();
     println!("sec word");
     stdin().read_line(&mut input).expect("cant read sec word");
 
 
-    let mut b = input.trim().to_string();
+    let b = input.trim().to_string();
     input.clear();
 
 

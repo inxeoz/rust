@@ -1,5 +1,5 @@
 
-use std::io::{stdin, stdout};
+use std::io::stdin;
 use crate::q3::rev;
 
 pub fn main() {
