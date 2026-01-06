@@ -25,6 +25,7 @@ mod q30;
 mod q31;
 mod q32;
 mod q33;
+mod q34;
 mod q4;
 mod q5;
 mod q6;
@@ -32,5 +33,5 @@ mod q7;
 mod q8;
 mod q9;
 fn main() {
-    q33::main()
+    q34::main()
 }
