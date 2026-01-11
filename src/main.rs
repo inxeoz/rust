@@ -1,5 +1,5 @@
-mod q41;
+mod q42;
 
 fn main() {
-    q41::main()
+    q42::main()
 }
