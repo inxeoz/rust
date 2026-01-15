@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 pub fn main() {
-    let how = 3;
+    let how = 4;
 
     let list = generate_parenth(how);
     println!("{:?}", list);
