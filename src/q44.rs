@@ -1,44 +1,28 @@
-const SIZE: usize = 3;
-use tinyvec::{ArrayVec, array_vec};
+use std::thread;
+use std::time::Duration;
+use tinyvec::ArrayVec;
+const MAX_DISK: usize = 3;
+const MAX_POLS: usize = 3;
+type Tower = ArrayVec<[u32; MAX_DISK]>;
 
-pub fn main() {
-    let left = array_vec!([usize; SIZE] => 5, 3 , 1);
-
-    let center = ArrayVec::<[usize; SIZE]>::new();
-
-    let right = ArrayVec::<[usize; SIZE]>::new();
-
-    print_toh(&left, &center, &right);
+struct Towers {
+    poles: [Tower; MAX_POLS],
 }
 
-fn print_toh(
-    left: &ArrayVec<[usize; SIZE]>,
-    center: &ArrayVec<[usize; SIZE]>,
-    right: &ArrayVec<[usize; SIZE]>,
-) {
-    let symbol = |x: Option<&usize>| {
-        if let Some(v) = x {
-            return v.to_string();
-        } else {
-            return "|".to_string();
-        }
-    };
-    for i in (0..SIZE).rev() {
+fn print_toh(t: &Towers) {
+    println!();
+    thread::sleep(Duration::from_secs(1));
+
+    let symbol = |x: Option<&usize>| x.map(|v| v.to_string()).unwrap_or("|".to_string());
+
+    for i in (0..MAX_DISK).rev() {
         println!(
             " {} {} {} ",
-            symbol(left.get(i)),
-            symbol(center.get(i)),
-            symbol(right.get(i))
+            symbol(t.poles[0].get(i)),
+            symbol(t.poles[1].get(i)),
+            symbol(t.poles[2].get(i))
         )
     }
 }
 
-fn move_tower(
-    left: ArrayVec<[usize; SIZE]>,
-    center: ArrayVec<[usize; SIZE]>,
-    right: ArrayVec<[usize; SIZE]>,
-) {
-    let l = left.last().map_or_else(|| -1i32, |&top| top as i32);
-    let c = center.last().map_or_else(|| -1i32, |&top| top as i32);
-    let r = right.last().map_or_else(|| -1i32, |&top| top as i32);
-}
+fn main() {}
